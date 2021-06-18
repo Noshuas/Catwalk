@@ -165,8 +165,8 @@ const AddAnswerForm = ({
         <button id="photoButton" type="button" onClick={uploader.open}>Add Picture</button>
       </div>
       <span>For your privacy, do not use your full name or email address</span>
-      <div className="add-answer-btn">
-        <button onClick={handleQuestionSubmit} type="button">Submit</button>
+      <div className="add-answer-btn py-3 w-25 mx-auto my-2">
+        <button className="question-submit" onClick={handleQuestionSubmit} type="button">Submit</button>
       </div>
     </div>
   );

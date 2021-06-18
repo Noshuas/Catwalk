@@ -173,7 +173,7 @@ h1, .h1 {
   background-color: $tertiary-color !important;
 }
 .bg-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .bg-warn {
   background-color: $text-warn;
@@ -312,6 +312,9 @@ h1, .h1 {
   border-right-style: solid;
   border-right-width: 2px;
 }
+.border-transparent {
+  border-color: transparent;
+}
 .border-primary {
   border-color: $primary-color;
 }
@@ -350,7 +353,6 @@ header {
   margin: 0;
   padding: 0;
   border-radius: 0;
-  background-color: $secondary-color;
   text-align: center;
   position: relative;
   width: 100%;
@@ -359,7 +361,6 @@ header {
 nav {
   position: absolute;
   border-radius: 0;
-  background-color: $secondary-color;
   width: 100%;
   text-align: left;
   top: 100%;
@@ -404,7 +405,7 @@ nav {
   align-items: center;
   & span, span::before, span::after {
     display: block;
-    background-color: white;
+    background-color: $secondary-color;
     height: 3px;
     width: 2em;
     border-radius: 2px;
@@ -658,7 +659,6 @@ nav {
   max-height: 110% !important;
   max-width: 110% !important;
   background-size: contain;
-  background-color: $primary-color;
 }
 .overview-gallery-thumbnails-wrapper {
   height: 100%;
@@ -1112,7 +1112,7 @@ nav {
   border-style: solid;
   border-width: 1px;
   transition: all .15s ease-in;
-  &:focus {
+  &:focus, &:hover {
     border-style: solid;
     border-width: 1px;
     border-color: $primary-color;
@@ -1122,7 +1122,7 @@ nav {
   border-color: transparent;
 }
 .btn-focus-dark {
-  &:focus {
+  &:focus, &:hover {
     border-color: $tertiary-color;
   }
 }

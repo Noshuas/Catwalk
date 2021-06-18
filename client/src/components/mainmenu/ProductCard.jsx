@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/forbid-prop-types */
 import React, { useContext, useEffect, useState } from 'react';

@@ -44,21 +44,23 @@ const QuestionsView = ({ questionInfo, Name }) => {
     setSearch(input);
   };
 
-  const moreQuestions = questionView ? 'More Questions' : 'Collapse Questions';
+  const totalQs = `See Remaining ${questionInfo.questions.results.length - 4} Questions`
+  const moreQuestions = questionView ? totalQs : 'Collapse Questions';
 
   return (
     <div id="QA-view" className={`${themeMode === 'Light' ? 'text-muted' : 'text-muted-light'}`}>
-      <div id="inner-QAview" className={`${themeMode === 'Light' ? 'bg-light border-light' : 'bg-dark border-dark'}`}>
-        <h1 id="QA-header">Questions & Answers</h1>
-        <div>
+      <div id="inner-QAview" className={`${themeMode === 'Light' ? 'bg-light border-light' : 'bg-dark border-dark text-dark'}`}>
+        <div className="QA-header-search">
+      <h1 id="QA-header" className={`${themeMode === 'Light' ? 'text-muted' : 'text-muted-light'}`} >Questions & Answers</h1>
           <Search searchQuestions={searchQuestions} />
         </div>
         <div id="question-cards">
           {questionInfoObj.map((question) => <Question key={question.question_id} question={question} />)}
         </div>
+        { (questionInfo.questions.results.length > 4) ?
         <button className="add-more-questions py-3 w-50 mx-auto my-2" onClick={handleMoreQuestions}>
             {moreQuestions}
-        </button>
+        </button> : null}
             <AddQuestion questionInfo={questionInfo.questions} Name={Name} />
       </div>
     </div>

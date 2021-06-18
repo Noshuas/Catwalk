@@ -37,6 +37,10 @@
   align-items: flex-start;
 }
 
+.QA-header-search {
+  margin-left: 1rem;
+}
+
 div#inner-QAview {
   display: flex;
   flex: 1;
@@ -76,7 +80,7 @@ div#inner-QAview {
   overflow-y: scroll;
   min-width: 20em;
   max-width: 8em;
-  box-shadow: -2px 2px 3px #FCC790;
+  box-shadow: -2px 2px 3px #9c9c9c;
   word-break: break-all;
 }
 
@@ -179,8 +183,7 @@ p.question {
 }
 
 .modal-btn {
-  border: 1px solid #55b8d9;
-  background-color: transparent;
+  background-color: #79E0D8;
   font-family: inherit;
   cursor: pointer;
   color: black;
@@ -239,6 +242,10 @@ p.question {
   font-size: smaller;
 }
 
+.sellerBold {
+  font-weight: bold;
+}
+
 .answer-date {
   font-size: small;
   text-align: right;
@@ -275,7 +282,6 @@ p.question {
 }
 
 .answer-helpfulness-btn:hover {
-  color:rgb(43, 174, 226);
   font-weight: bolder;
 }
 
@@ -319,10 +325,11 @@ input {
   height: 2em;
   min-width: 250px;
   border-radius: 0;
-  background-color: #ededed;
+  background-color: transparent;
   border: none;
   outline: none;
   border-bottom: 1px solid black;
+
 }
 
 //==================Modal=====================
@@ -402,18 +409,24 @@ input {
   color: #b9dfe0 !important;
 	text-transform: uppercase;
 	background: #ffffff;
+  opacity: .75;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 18%);
 	padding: 20px;
-	border: 4px solid #4c82ad!important;
 	border-radius: 6px;
 	display: inline-block;
 	transition: all 0.3s ease 0s
 }
 
 .add-question-btn:hover {
-  color: #4c82ad !important;
-	border-radius: 50px;
-	border-color: #b9dfe0 !important;
+  border-radius: 20px;
+	border-color: #444444 !important;
 	transition: all 0.3s ease 0s;
+}
+
+.question-submit {
+  width: 100%
 }
 
 .close-modal-container {
@@ -426,9 +439,10 @@ input {
 .close-modal {
   float: right;
   width: 10%;
-  height: 100%;
+  height: 50%;
   border-color: #f1c40f;
   color: black;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 18%);
   background-image: -webkit-linear-gradient(
 45deg
 , #ff3300 50%, transparent 50%);
@@ -454,7 +468,6 @@ input {
   align-content: stretch;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
   width: 90%;
   height: 65%;
   padding-bottom: 1px;
@@ -504,18 +517,24 @@ input {
   color: #b9dfe0 !important;
 	text-transform: uppercase;
 	background: #ffffff;
+  opacity: .75;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 18%);
 	padding: 20px;
-	border: 4px solid #4c82ad!important;
 	border-radius: 6px;
 	display: inline-block;
 	transition: all 0.3s ease 0s
 }
 
 .add-answer-btn:hover {
-  color: #4c82ad !important;
-	border-radius: 50px;
-	border-color: #b9dfe0 !important;
+	border-radius: 20px;
+	border-color: #444444 !important;
 	transition: all 0.3s ease 0s;
+}
+
+.answer-submit {
+  width: 100%
 }
 @media screen and (min-width: 1200px) {
   #modal-main {

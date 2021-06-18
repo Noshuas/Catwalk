@@ -40,6 +40,7 @@ const ProductExpandedView = ({
         type="button"
         // src={`${photoStyle}`}
         alt="product"
+        aria-label="main image"
         style={{ backgroundImage: `url(${photoStyle})`, ...imageStyle }}
         className={`mx-auto rounded-sm overview-carousel-image transition
           ${zoomed ? 'cursor-minus shadow-no' : 'cursor-plus'}
@@ -90,6 +91,7 @@ const ProductExpandedView = ({
           }
         }}
         role="button"
+        aria-label="expand view"
         tabIndex="0"
       >
         &nbsp;

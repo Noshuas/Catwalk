@@ -36,10 +36,10 @@ const NavigationBar = () => {
     }
   };
   return (
-    <header>
-      <Link className="logo text-light cursor-pointer h1" to="/"><i className="fas fa-store" /></Link>
-      <input type="checkbox" id="nav-toggle" className="nav-toggle" />
-      <nav id="navigation">
+    <header className="shadow rounded">
+      <Link className="logo text-primary cursor-pointer h1 text-secondary" to="/"><i className="fas fa-store" /></Link>
+      <input type="checkbox" id="nav-toggle" className="nav-toggle bg" />
+      <nav id="navigation" className={themeMode === 'Light' ? 'bg-lighter' : 'bg-darker'}>
         <ul>
           <li>
             <label className="switch">
@@ -49,9 +49,9 @@ const NavigationBar = () => {
             </label>
           </li>
           <li>
-            <Link to="/" className="text-light hover-outline-light cursor-pointer">Home</Link>
+            <Link to="/" className={`text-secondary cursor-pointer ${themeMode === 'Light' ? 'hover-outline' : 'hover-outline-light'}`}>Home</Link>
           </li>
-          <li className="user-input-form ">
+          <li className="user-input-form text-secondary">
             <input
               type="number"
               id="nav-search"
@@ -59,8 +59,8 @@ const NavigationBar = () => {
               placeholder=" "
               onKeyDown={searchProduct}
             />
-            <div htmlFor="nav-search" className="user-line bg-light cursor-pointer" />
-            <label htmlFor="nav-search" className="text-muted-light cursor-pointer">Search (17067 - 18076)</label>
+            <div htmlFor="nav-search" className="user-line bg-secondary cursor-pointer" />
+            <label htmlFor="nav-search" className="text-secondary cursor-pointer">Search (17067 - 18076)</label>
           </li>
         </ul>
       </nav>

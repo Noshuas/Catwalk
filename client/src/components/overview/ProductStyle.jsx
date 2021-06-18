@@ -66,6 +66,7 @@ const ProductStyle = ({ Style, setCurrentStyle, CurrentStyle }) => {
     >
       <div
         className={currentClass}
+        alt="thumbnail preview"
         style={{
           backgroundImage: `url("${Style.photos[0].thumbnail_url}")`,
           backgroundSize: 'cover',

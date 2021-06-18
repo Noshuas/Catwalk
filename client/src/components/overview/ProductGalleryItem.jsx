@@ -1,12 +1,24 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import TrackerContext from '../context/Tracker';
+import ThemeContext from '../context/Theme';
 
 const ProductGalleryItem = ({
   position, photo, selectedPhoto, SelectPhoto,
 }) => {
   const { tracking, setTracking } = useContext(TrackerContext);
+  const { themeMode } = useContext(ThemeContext);
+  const [selectedColor, setSelectedColor] = useState('bg-primary');
+
+  useEffect(() => {
+    if (themeMode === 'Light') {
+      setSelectedColor('bg-primary border-primary');
+    } else {
+      setSelectedColor('bg-tertiary border-tertiary');
+    }
+  }, [themeMode]);
+
   const boilerThumbnail = {
     position: 'absolute',
     height: '10%',
@@ -42,7 +54,7 @@ const ProductGalleryItem = ({
       <img
         src={photo.photo.thumbnail_url}
         alt="product thumbnail"
-        className={`shadow btn rounded-sm overview-gallery-thumbnail-picture ${selectedPhoto ? ' border text-primary overview-gallery-selected' : null}`}
+        className={`shadow btn rounded-sm overview-gallery-thumbnail-picture ${selectedPhoto ? `border text-primary overview-gallery-selected ${selectedColor}` : null}`}
       />
     </div>
   );

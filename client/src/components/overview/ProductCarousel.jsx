@@ -134,12 +134,14 @@ const ProductCarousel = ({ Photos }) => {
                 cursor: 'zoom-in',
               }}
               role="button"
+              aria-label="expand main image"
               tabIndex="0"
             >
               expand image
             </div>
             {restrict !== 'decrement' && !zoomed && restrict !== 'null' ? (
               <button
+                aria-label="previous image"
                 type="button"
                 className="overview-carousel-decrement"
                 style={expanded ? { left: '0' } : null}
@@ -149,12 +151,13 @@ const ProductCarousel = ({ Photos }) => {
                   setTracking([...tracking, tracked]);
                 }}
               >
-                <i className="fas fa-chevron-left fa-lg rounded-circle overview-carousel-icon" style={{ overflow: 'hidden', fontSize: '2em' }} />
+                <i className="fas fa-chevron-left fa-lg rounded-circle overview-carousel-icon" aria-hidden="true" style={{ overflow: 'hidden', fontSize: '2em' }} />
               </button>
             ) : null}
             {restrict !== 'increment' && !zoomed && restrict !== 'null' ? (
               <button
                 type="button"
+                aria-label="next image"
                 className="overview-carousel-increment"
                 style={expanded ? { left: '100%' } : null}
                 onClick={(event) => {
@@ -163,7 +166,7 @@ const ProductCarousel = ({ Photos }) => {
                   setTracking([...tracking, tracked]);
                 }}
               >
-                <i className="fas fa-chevron-right fa-lg rounded-circle overview-carousel-icon" style={{ overflow: 'hidden', fontSize: '2em' }} />
+                <i className="fas fa-chevron-right fa-lg rounded-circle overview-carousel-icon" aria-hidden="true" style={{ overflow: 'hidden', fontSize: '2em' }} />
               </button>
             ) : null}
           </div>

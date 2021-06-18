@@ -46,6 +46,7 @@ const ProductGallery = ({ PhotoGallery, CurrentPhoto, SelectPhoto }) => {
       <div className="overview-gallery-thumbnails-wrapper">
         <button
           type="button"
+          aria-label="next gallery"
           onClick={(event) => {
             galleryReducer(currentView + 7);
             const tracked = { element: event.target, time: new Date(), module: 'Gallery Increment' };
@@ -57,6 +58,7 @@ const ProductGallery = ({ PhotoGallery, CurrentPhoto, SelectPhoto }) => {
         </button>
         <button
           type="button"
+          aria-label="previous gallery"
           onClick={(event) => {
             galleryReducer(currentView - 7);
             const tracked = { element: event.target, time: new Date(), module: 'Gallery Decrement' };

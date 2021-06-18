@@ -33,14 +33,14 @@ const AddQuestionForm = ({ questionInfo, closeModal }) => {
   };
 
   const handleQuestionSubmit = () => {
-    const productId = questionInfo.product_id;
-    Connect.postAddQuestion({
-      body, name, email, product_id: productId,
-    })
-      .then((response) => {
-        console.log(response);
-      });
-    closeModal();
+      const productId = questionInfo.product_id;
+      Connect.postAddQuestion({
+        body, name, email, product_id: productId,
+      })
+        .then((response) => {
+          console.log(response);
+        });
+      closeModal();
   };
 
   return (
@@ -104,8 +104,8 @@ const AddQuestionForm = ({ questionInfo, closeModal }) => {
         </div>
       </div>
       <span>For your privacy, do not use your full name or email address</span>
-      <div className="add-question-btn">
-        <button onClick={handleQuestionSubmit} type="button">Submit</button>
+      <div className="add-question-btn py-3 w-25 mx-auto my-2">
+        <button className="question-submit" onClick={handleQuestionSubmit} type="button">Submit</button>
       </div>
     </div>
   );

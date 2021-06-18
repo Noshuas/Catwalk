@@ -17,7 +17,7 @@ const Overview = ({
   const { themeMode } = useContext(ThemeContext);
 
   return (
-    <div className="full-view ">
+    <div className="full-view">
       <div className="row justify-content-around" style={{ position: 'relative' }} id="carousel-and-info">
         {CurrentStyle.photos && CurrentStyle.photos.length > 0
           ? (<ProductCarousel Photos={CurrentStyle.photos} />)
