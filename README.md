@@ -7,7 +7,7 @@ Utilizing React with React hooks accelarated development time and enriched the e
 
 
 
-  
+
 
 
 
@@ -19,8 +19,8 @@ Utilizing React with React hooks accelarated development time and enriched the e
 
 - [@Noshua Setzer](https://github.com/Noshuas) - Scope: Ratings and Reviews
 ## Demo
-### Home page 
-Home page is where all* of the products will show up. 
+### Home page
+Home page is where all* of the products will show up.
 
 \* there will be some products not shown because of edge case detections. You can manually navigate to them by adding `/products/:productId` to the url
 ![Alt Text](https://media.giphy.com/media/4gbKIxFYGwotp3jnI5/giphy.gif)
@@ -33,21 +33,28 @@ Provides a quick insight on the product. Showing the different styles available,
 The Questions and Answers widget deals with all incoming questions and answers for the specified product on the page. From here a user can see posted questions, post their own questions, mark them as helpful or report them. On render the page will initially load four questions, any more questions after that, the user is given the option to load more. Within the questions card, a user can see various answer responses to the question. A user can add their own answers to the specific question by accessing the add answer modal and within the modal a user can upload up to 5 photos.
 
 ### Ratings and Reviews
-The ratings and reviews widget breaks down rating and review information about the given product, all of which information is provided by users of the site. On page load the widget will request information from the api to dynamically render the correct information on the DOM. You can also interact with the widget to filter, sort, and add reviews.
+The ratings and reviews widget breaks down rating and review information about the given product, all of which information is provided by users of the site. On page load, the widget will request information from the api to dynamically render the correct information on the DOM. Such information includes:
+ - **overall product rating**, represented as a float rounded to the nearest tenth and as a series of stars rounded to the nearest quarter of a complete star.
+ - **the number of people who recommend this product**, represented as a percentage out of 100.
+ - **a breakdown of rating distributions**, where the labels for each rating value (from 1 to 5) are buttons that toggle filters on the review list
+ - **a breakdown of ratings for individual characteristics** such as fit, comfort, build quality, etc.
+ - **individual ratings and reviews**, which can by filtered and sorted.
+
+Additionally, users can also submit their own ratings and reviews pertaining to all the aformentioned content through the modal.
 
 
 
-## Installation 
+## Installation
 
 Install the project with yarn. Check you have yarn installed
 https://yarnpkg.com/getting-started
 
 Check yarn version to be "berry" or 2.0+. Check the docs how to update the current yarn version
-```bash 
+```bash
   yarn -v
 ```
 install dependancies
-```bash 
+```bash
   yarn install
 ```
 ## Environment Variables
@@ -68,7 +75,7 @@ Edit .env file and add in the two tokens needed
 
 ## Tech Stack
 
-**Client:** React, SASS, Axios, 
+**Client:** React, SASS, Axios,
 
 **Server:** Node, Express, Axios
 

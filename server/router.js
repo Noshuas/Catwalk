@@ -46,7 +46,7 @@ app.get('/api/products/:productId', (req, res) => {
       res.status(200).send(result.data);
     })
     .catch((error) => {
-      res.status(500).send('error at API fetch', error);
+      res.status(500).send(error);
     });
 });
 
@@ -58,7 +58,7 @@ app.get('/api/products/:productId/styles', (req, res) => {
       res.status(200).send(result.data);
     })
     .catch((error) => {
-      res.status(500).send('error at API fetch', error);
+      res.status(500).send(error);
     });
 });
 
