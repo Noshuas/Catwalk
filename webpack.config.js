@@ -47,8 +47,6 @@ module.exports = {
       }
     ]
   },
-  mode: 'production',
-  watch: true,
   resolve: {
     extensions: ['.js', '.jsx']
   }

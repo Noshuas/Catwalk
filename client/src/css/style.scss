@@ -1117,12 +1117,18 @@ nav {
     border-width: 1px;
     border-color: $primary-color;
   }
+  &::after, &::before {
+    border-color: $primary-color;
+  }
 }
 .btn-focus-light, .btn-focus-dark {
   border-color: transparent;
 }
 .btn-focus-dark {
   &:focus, &:hover {
+    border-color: $tertiary-color;
+  }
+  &::after, &::before {
     border-color: $tertiary-color;
   }
 }
