@@ -1,7 +1,7 @@
 {
   "name": "fec-application",
   "version": "1.0.0",
-  "description": "Front end capstone project for Hack Reactor. Updating an outdated front end portal for an ecommerce website",
+  "description": "Front-end redesign project for an ecommerce website.",
   "license": "MIT",
   "repository": {
     "type": "git",
